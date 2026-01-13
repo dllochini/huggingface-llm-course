@@ -18,9 +18,15 @@
 - *Encoder* - recieves an input, builds representation of it.
 - *Decoder* - uses encoder’s representation (features) + other inputs -> generate a target sequence
 11. these can be used independently.
-- **Encoder-only model** - Good for tasks that require understanding of the input (sentence classification & NER)
-- **Decoder-only models** - Good for generative tasks(text generation)
-- **Encoder-decoder models**/**sequence-to-sequence models** - Good for generative tasks (translation/summarization)
+- **Encoder-only model** 
+    - Good for tasks that require understanding of the input (sentence classification & NER)
+    - use a bidirectional approach (understand context from both directions)
+- **Decoder-only models**
+    - Good for generative tasks(text generation)
+    - process text from left to right
+- **Encoder-decoder models**/**sequence-to-sequence models** 
+    - Good for generative tasks (translation/summarization)
+    - combine both approaches
 12. **Attention layers**
 - key feature of transformer models
 - tells the model to pay specific attention to certain words in the sentence you passed it (and more or less ignore the others) when dealing with the representation of each word.
